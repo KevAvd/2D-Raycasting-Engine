@@ -7,18 +7,19 @@ namespace RCE {
 		float width;
 		float height;
 		float size;
-		float *values;
+		int *values;
 	public:
 
 		//Constructor
-		Map(float width, float height, float values[])
+		Map() : width(NULL), height(NULL), size(NULL), values(nullptr) {}
+		Map(float width, float height, int values[])
 		: width(width), height(height), size(width*height), values(values) {}
 
 		//Getters
 		float getWidth();
 		float getHeigth();
 		float getSize();
-		float* getValues();
+		int* getValues();
 	};
 }
 #endif // !RCE_MAP_H

@@ -7,7 +7,6 @@ namespace RCE {
 		float totalElapsedSeconds;
 		std::chrono::steady_clock::time_point initTime = std::chrono::high_resolution_clock::now();
 	public:
-		DeltaTime();
 		void setInitTime();
 		void calcElapsedSeconds();
 		float getDeltaTime();

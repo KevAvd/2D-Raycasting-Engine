@@ -15,9 +15,9 @@ namespace RCE {
 		sf::Color color;
 	public:
 		//Constructors
-		Player() : x(0),y(0),viewAngle(0), color(sf::Color::Red) {}
+		Player() : x(0),y(0), speed(0), viewAngle(0), color(sf::Color::Red) {}
 		Player(float x, float y, float viewAngle, float speed, sf::Color color)
-		: x(x), y(y), viewAngle(viewAngle), speed(speed), color(color) {}
+		: x(x), y(y), speed(speed), viewAngle(viewAngle), color(color) {}
 
 		//Getters
 		float getX();
@@ -39,10 +39,6 @@ namespace RCE {
 		void MoveBackward(float dT);
 		void Moveleft(float dT);
 		void MoveRight(float dT);
-
-		//Draw functions
-		void DrawAsCirc(sf::RenderWindow window, sf::Vector2f pos, float radius);
-		void DrawAsRect(sf::RenderWindow window, sf::Vector2f pos, sf::Vector2f size);
 	};
 }
 #endif // !RCE_PLAYER_H
