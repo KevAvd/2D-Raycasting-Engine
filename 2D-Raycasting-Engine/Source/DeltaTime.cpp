@@ -2,12 +2,6 @@
 #include "DeltaTime.h"
 
 /// <summary>
-/// Constructor of the classe "DeltaTime"
-/// </summary>
-RCE::DeltaTime::DeltaTime() {
-	setInitTime();
-}
-/// <summary>
 /// Initialize start time
 /// </summary>
 void RCE::DeltaTime::setInitTime() {

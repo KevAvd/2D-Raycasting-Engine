@@ -136,34 +136,3 @@ void RCE::Player::MoveRight(float dT) {
 	x += dx * dT;
 	y += dy * dT;
 }
-
-/***************************************
-*           Draw functions
-****************************************/
-
-/// <summary>
-/// Draw the player as a circle
-/// </summary>
-/// <param name="window"> Window where the player is drawn </param>
-/// <param name="pos"> Position where the player is drawn in the window </param>
-/// <param name="radius"> Radius of the cirlce </param>
-void RCE::Player::DrawAsCirc(sf::RenderWindow window, sf::Vector2f pos, float radius) {
-	sf::CircleShape toDraw;
-	toDraw.setPosition(pos);
-	toDraw.setFillColor(color);
-	toDraw.setRadius(radius);
-	window.draw(toDraw);
-}
-/// <summary>
-/// Draw the player as a rectangle
-/// </summary>
-/// <param name="window"> Window where the player is drawn </param>
-/// <param name="pos"> Position where the player is drawn in the window </param>
-/// <param name="size"> Size of the rectangle </param>
-void RCE::Player::DrawAsRect(sf::RenderWindow window, sf::Vector2f pos, sf::Vector2f size) {
-	sf::RectangleShape toDraw;
-	toDraw.setPosition(pos);
-	toDraw.setFillColor(color);
-	toDraw.setSize(size);
-	window.draw(toDraw);
-}

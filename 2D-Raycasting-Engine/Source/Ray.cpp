@@ -31,7 +31,9 @@ float RCE::Ray::getAngle() {
 /// </summary>
 /// <returns> Ray's length </returns>
 float RCE::Ray::getLength() {
-
+	float dx = abs(hPoint.x - sPoint.x);
+	float dy = abs(hPoint.y - sPoint.y);
+	return sqrt(dx * dx + dy * dy);
 }
 /// <summary>
 /// Determine if the ray hit a horizontal wall or not
@@ -45,7 +47,7 @@ bool RCE::Ray::Horizontal() {
 /// </summary>
 /// <returns> true if hitted something </returns>
 bool RCE::Ray::HasHit() {
-	return HasHit;
+	return this->hasHit;
 }
 
 /***************************************
